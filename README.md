@@ -19,7 +19,7 @@ Finally, initiate the generator:
 $ yo generator-hapi
 ```
 
-### Directory Structure
+### Generated Directory Structure
 
 This hapijs generator assumes that you want your project structure to look like this:
 
@@ -30,4 +30,10 @@ This hapijs generator assumes that you want your project structure to look like 
 ---module-dao.js
 ---module-route.js
 ---module-test.js
+```
+
+### Usage
+
+```bash
+$ yo hapi:module foo
 ```
