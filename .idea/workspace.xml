@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94d5be2c-0358-4d5a-8de6-56df3210e3df" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/generator_hapi_node_modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generators/module/templates/module-dao.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generators/module/templates/module-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test-module-creation.js" />
-      <change type="MOVED" beforePath="C:\Users\m089269\github_projects\generator-hapi\generators\module\templates\somefile.js" afterPath="$PROJECT_DIR$/generators/module/templates/module-ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generators/app/index.js" afterPath="$PROJECT_DIR$/generators/app/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generators/module/index.js" afterPath="$PROJECT_DIR$/generators/module/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test-creation.js" afterPath="$PROJECT_DIR$/test/test-creation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test-load.js" afterPath="$PROJECT_DIR$/test/test-load.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="generator-hapi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -345,10 +335,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1552" height="842" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32676056" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32676056" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
