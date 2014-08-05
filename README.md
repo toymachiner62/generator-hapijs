@@ -10,13 +10,13 @@
 To install generator-hapi from npm, run:
 
 ```bash
-$ npm install -g generator-hapi
+$ npm install -g generator-hapijs
 ```
 
 Finally, initiate the generator:
 
 ```bash
-$ yo generator-hapi
+$ yo generator-hapijs
 ```
 
 ### Generated Directory Structure
