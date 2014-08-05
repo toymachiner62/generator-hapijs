@@ -1,5 +1,5 @@
 {
-  "name": "generator-hapi",
+  "name": "generator-hapijs",
   "version": "0.0.0",
   "description": "Yeoman generator for creatinjg hapijs modules",
   "license": "MIT",

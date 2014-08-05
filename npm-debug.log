@@ -1,0 +1,131 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@1.4.21
+3 info using node@v0.10.30
+4 verbose node symlink C:\Program Files (x86)\nodejs\\node.exe
+5 verbose publish [ '.' ]
+6 verbose cache add [ '.', null ]
+7 verbose cache add name=undefined spec="." args=[".",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '.',
+8 verbose parsed url   path: '.',
+8 verbose parsed url   href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . C:\Users\m089269\AppData\Roaming\npm-cache\3a52ce78-.lock
+11 verbose tar pack [ 'C:\\Users\\m089269\\AppData\\Roaming\\npm-cache\\generator-hapi\\0.0.0\\package.tgz',
+11 verbose tar pack   '.' ]
+12 verbose tarball C:\Users\m089269\AppData\Roaming\npm-cache\generator-hapi\0.0.0\package.tgz
+13 verbose folder .
+14 info prepublish generator-hapi@0.0.0
+15 silly lockFile 1f1177db-tar tar://.
+16 verbose lock tar://. C:\Users\m089269\AppData\Roaming\npm-cache\1f1177db-tar.lock
+17 silly lockFile eb711779-generator-hapi-0-0-0-package-tgz tar://C:\Users\m089269\AppData\Roaming\npm-cache\generator-hapi\0.0.0\package.tgz
+18 verbose lock tar://C:\Users\m089269\AppData\Roaming\npm-cache\generator-hapi\0.0.0\package.tgz C:\Users\m089269\AppData\Roaming\npm-cache\eb711779-generator-hapi-0-0-0-package-tgz.lock
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 1f1177db-tar tar://.
+21 silly lockFile eb711779-generator-hapi-0-0-0-package-tgz tar://C:\Users\m089269\AppData\Roaming\npm-cache\generator-hapi\0.0.0\package.tgz
+22 silly lockFile eb711779-generator-hapi-0-0-0-package-tgz tar://C:\Users\m089269\AppData\Roaming\npm-cache\generator-hapi\0.0.0\package.tgz
+23 silly lockFile c3ed1a3c-che-generator-hapi-0-0-0-package C:\Users\m089269\AppData\Roaming\npm-cache\generator-hapi\0.0.0\package
+24 verbose lock C:\Users\m089269\AppData\Roaming\npm-cache\generator-hapi\0.0.0\package C:\Users\m089269\AppData\Roaming\npm-cache\c3ed1a3c-che-generator-hapi-0-0-0-package.lock
+25 silly lockFile c3ed1a3c-che-generator-hapi-0-0-0-package C:\Users\m089269\AppData\Roaming\npm-cache\generator-hapi\0.0.0\package
+26 silly lockFile c3ed1a3c-che-generator-hapi-0-0-0-package C:\Users\m089269\AppData\Roaming\npm-cache\generator-hapi\0.0.0\package
+27 silly lockFile 3a52ce78- .
+28 silly lockFile 3a52ce78- .
+29 silly publish { name: 'generator-hapi',
+29 silly publish   version: '0.0.0',
+29 silly publish   description: 'Yeoman generator for creatinjg hapijs modules',
+29 silly publish   license: 'MIT',
+29 silly publish   main: 'app/index.js',
+29 silly publish   repository:
+29 silly publish    { type: 'git',
+29 silly publish      url: 'https://github.com/toymachiner62/generator-hapi' },
+29 silly publish   author:
+29 silly publish    { name: 'Tom Caflisch',
+29 silly publish      email: 'tomcaflisch@gmail.com',
+29 silly publish      url: 'https://github.com/toymachiner62' },
+29 silly publish   engines: { node: '>=0.10.0' },
+29 silly publish   scripts: { test: 'mocha' },
+29 silly publish   files: [ 'app' ],
+29 silly publish   keywords: [ 'yeoman-generator' ],
+29 silly publish   dependencies:
+29 silly publish    { 'yeoman-generator': '~0.16.0',
+29 silly publish      chalk: '~0.4.0',
+29 silly publish      yosay: '^0.1.0' },
+29 silly publish   devDependencies: { mocha: '*' },
+29 silly publish   peerDependencies: { yo: '>=1.0.0' },
+29 silly publish   gitHead: '17a27627127a2926a60c062439a277b63207261e',
+29 silly publish   readme: '# generator-hapi [![Build Status](https://secure.travis-ci.org/toymachiner62/generator-hapi.png?branch=master)](https://travis-ci.org/toymachiner62/generator-hapi)\r\n\r\n> [Yeoman](http://yeoman.io) generator for scaffolding [Hapijs](http://hapijs.com) modules \r\n\r\n\r\n## Getting Started\r\n\r\n### Installation\r\n\r\nTo install generator-hapi from npm, run:\r\n\r\n```bash\r\n$ npm install -g generator-hapi\r\n```\r\n\r\nFinally, initiate the generator:\r\n\r\n```bash\r\n$ yo generator-hapi\r\n```\r\n\r\n### Generated Directory Structure\r\n\r\nThis hapijs generator assumes that you want your project structure to look like this:\r\n\r\n```bash\r\n-project\r\n--module\r\n---module-ctrl.js\r\n---module-dao.js\r\n---module-route.js\r\n---module-test.js\r\n```\r\n\r\n### Usage\r\n\r\n```bash\r\n$ yo hapi:module foo  \r\n```',
+29 silly publish   readmeFilename: 'README.md',
+29 silly publish   bugs: { url: 'https://github.com/toymachiner62/generator-hapi/issues' },
+29 silly publish   homepage: 'https://github.com/toymachiner62/generator-hapi',
+29 silly publish   _id: 'generator-hapi@0.0.0',
+29 silly publish   _shasum: 'c51dcefd76d2c8cd89e9942a0b4c1bb0e0844ef3',
+29 silly publish   _from: '.' }
+30 verbose request where is /generator-hapi
+31 verbose request registry https://registry.npmjs.org/
+32 verbose request id 6e2cb62e6c945773
+33 verbose url raw /generator-hapi
+34 verbose url resolving [ 'https://registry.npmjs.org/', './generator-hapi' ]
+35 verbose url resolved https://registry.npmjs.org/generator-hapi
+36 verbose request where is https://registry.npmjs.org/generator-hapi
+37 info trying registry request attempt 1 at 15:37:36
+38 http PUT https://registry.npmjs.org/generator-hapi
+39 http 403 https://registry.npmjs.org/generator-hapi
+40 verbose headers { date: 'Tue, 05 Aug 2014 20:37:36 GMT',
+40 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+40 verbose headers   'content-type': 'application/json',
+40 verbose headers   'cache-control': 'max-age=60',
+40 verbose headers   'content-length': '2206',
+40 verbose headers   'accept-ranges': 'bytes',
+40 verbose headers   via: '1.1 varnish',
+40 verbose headers   'x-served-by': 'cache-dfw1835-DFW',
+40 verbose headers   'x-cache': 'MISS',
+40 verbose headers   'x-cache-hits': '0',
+40 verbose headers   'x-timer': 'S1407271056.704860,VS0,VE211',
+40 verbose headers   'keep-alive': 'timeout=10, max=50',
+40 verbose headers   connection: 'Keep-Alive' }
+41 error publish Failed PUT 403
+42 error Error: forbidden user: toymachiner62 not authorized to modify generator-hapi
+42 error Changed: description "A Hapi.js generator for Yeoman" -> "Yeoman generator for creatinjg hapijs modules"
+42 error Changed: dist-tags.latest "0.0.1" -> "0.0.0"
+42 error Added: versions.0.0.0
+42 error Changed: readme "ERROR: No README.md file found!" -> "# generator-hapi [![Build Status](https://secure.travis-ci.org/toymachiner62/generator-hapi.png?branch=master)](https://travis-ci.org/toymachiner62/generator-hapi)\u000d\u000a\u000d\u000a> [Yeoman](http://yeoman.io) generator for scaffolding [Hapijs](http://hapijs.com) modules \u000d\u000a\u000d\u000a\u000d\u000a## Getting Started\u000d\u000a\u000d\u000a### Installation\u000d\u000a\u000d\u000aTo install generator-hapi from npm, run:\u000d\u000a\u000d\u000a```bash\u000d\u000a$ npm install -g generator-hapi\u000d\u000a```\u000d\u000a\u000d\u000aFinally, initiate the generator:\u000d\u000a\u000d\u000a```bash\u000d\u000a$ yo generator-hapi\u000d\u000a```\u000d\u000a\u000d\u000a### Generated Directory Structure\u000d\u000a\u000d\u000aThis hapijs generator assumes that you want your project structure to look like this:\u000d\u000a\u000d\u000a```bash\u000d\u000a-project\u000d\u000a--module\u000d\u000a---module-ctrl.js\u000d\u000a---module-dao.js\u000d\u000a---module-route.js\u000d\u000a---module-test.js\u000d\u000a```\u000d\u000a\u000d\u000a### Usage\u000d\u000a\u000d\u000a```bash\u000d\u000a$ yo hapi:module foo  \u000d\u000a```"
+42 error Changed: time.modified "2013-08-02T09:45:28.896Z" -> "2014-08-05T20:36:26.803Z"
+42 error Added: time.0.0.0
+42 error Changed: author.name "Van Nguyen" -> "Tom Caflisch"
+42 error Changed: author.email "the.gol.effect@gmail.com" -> "tomcaflisch@gmail.com"
+42 error Changed: author.url "https://github.com/thegoleffect" -> "https://github.com/toymachiner62"
+42 error Changed: repository.url "git://github.com/thegoleffect/generator-hapi.git" -> "https://github.com/toymachiner62/generator-hapi"
+42 error Changed: homepage "https://github.com/thegoleffect/generator-hapi" -> "https://github.com/toymachiner62/generator-hapi"
+42 error Changed Type: bugs
+42 error Added: license
+42 error Added: _attachments: generator-hapi
+42 error     at RegClient.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:300:14)
+42 error     at Request._callback (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:238:65)
+42 error     at Request.self.callback (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\request.js:123:22)
+42 error     at Request.emit (events.js:98:17)
+42 error     at Request.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\request.js:893:14)
+42 error     at Request.emit (events.js:117:20)
+42 error     at IncomingMessage.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\request\request.js:844:12)
+42 error     at IncomingMessage.emit (events.js:117:20)
+42 error     at _stream_readable.js:938:16
+42 error     at process._tickCallback (node.js:419:13)
+43 error If you need help, you may report this *entire* log,
+43 error including the npm and node versions, at:
+43 error     <http://github.com/npm/npm/issues>
+44 error System Windows_NT 6.2.9200
+45 error command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+46 error cwd C:\Users\m089269\github_projects\generator-hapi
+47 error node -v v0.10.30
+48 error npm -v 1.4.21
+49 verbose exit [ 1, true ]
