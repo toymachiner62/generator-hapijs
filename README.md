@@ -35,5 +35,5 @@ This hapijs generator assumes that you want your project structure to look like 
 ### Usage
 
 ```bash
-$ yo hapi:module foo
+$ yo hapi:module foo  
 ```
