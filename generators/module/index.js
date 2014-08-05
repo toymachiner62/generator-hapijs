@@ -30,10 +30,10 @@ var ModuleGenerator = yeoman.generators.Base.extend({
 
 	// Copy all the template files for the module
   files: function () {
-		  console.log(this.name);
     this.copy('module-ctrl.js', this.name+'-ctrl.js');
 		this.copy('module-dao.js', this.name+'-dao.js');
 		this.copy('module-test.js', this.name+'-test.js');
+		this.copy('module-route.js', this.name+'-route.js');
   }
 });
 
