@@ -1,4 +1,4 @@
-# generator-hapi [![Build Status](https://secure.travis-ci.org/toymachiner62/generator-hapi.png?branch=master)](https://travis-ci.org/toymachiner62/generator-hapi)
+# generator-hapi [![Build Status](https://secure.travis-ci.org/toymachiner62/generator-hapijs.png?branch=master)](https://travis-ci.org/toymachiner62/generator-hapijs)
 
 > [Yeoman](http://yeoman.io) generator for scaffolding [Hapijs](http://hapijs.com) modules 
 
@@ -16,7 +16,7 @@ $ npm install -g generator-hapijs
 Finally, initiate the generator:
 
 ```bash
-$ yo generator-hapijs
+$ yo hapijs
 ```
 
 ### Generated Directory Structure
@@ -35,5 +35,5 @@ This hapijs generator assumes that you want your project structure to look like 
 ### Usage
 
 ```bash
-$ yo hapi:module foo  
+$ yo hapijs:module foo  
 ```

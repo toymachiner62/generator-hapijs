@@ -3,5 +3,5 @@ node_js:
   - '0.10'
 before_install:
   - currentfolder=${PWD##*/}
-  - if [ "$currentfolder" != 'generator-hapi' ]; then cd .. && eval "mv $currentfolder generator-hapi" && cd generator-hapi; fi
+  - if [ "$currentfolder" != 'generator-hapijs' ]; then cd .. && eval "mv $currentfolder generator-hapijs" && cd generator-hapijs; fi
 
