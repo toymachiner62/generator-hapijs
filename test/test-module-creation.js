@@ -58,7 +58,8 @@ describe('module generator', function () {
 								// add files you expect to exist here.
 								'item-ctrl.js',
 								'item-dao.js',
-								'item-test.js'
+								'item-test.js',
+                'item-route.js'
 						];
 
 						this.app.options['skip-install'] = true;
