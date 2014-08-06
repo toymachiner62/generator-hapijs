@@ -3,7 +3,7 @@ var util = require('util');
 var yeoman = require('yeoman-generator');
 
 
-var ModuleGenerator = yeoman.generators.Base.extend({
+var SectionGenerator = yeoman.generators.Base.extend({
   init: function () {
     console.log('You called the module subgenerator with the argument ' + this.arguments.name + '.');
   },
@@ -37,4 +37,4 @@ var ModuleGenerator = yeoman.generators.Base.extend({
   }
 });
 
-module.exports = ModuleGenerator;
+module.exports = SectionGenerator;

@@ -1,4 +1,4 @@
-# generator-hapi [![Build Status](https://secure.travis-ci.org/toymachiner62/generator-hapijs.png?branch=master)](https://travis-ci.org/toymachiner62/generator-hapijs)
+# generator-hapi [![Build Status](https://secure.travis-ci.org/toymachiner62/generator-hapijs.png?branch=master)](https://travis-ci.org/toymachiner62/generator-hapijs) [![Code Climate](https://codeclimate.com/github/toymachiner62/generator-hapijs/badges/gpa.svg)](https://codeclimate.com/github/toymachiner62/generator-hapijs) [![Test Coverage](https://codeclimate.com/github/toymachiner62/generator-hapijs/badges/coverage.svg)](https://codeclimate.com/github/toymachiner62/generator-hapijs) 
 
 > [Yeoman](http://yeoman.io) generator for scaffolding [Hapijs](http://hapijs.com) modules 
 
