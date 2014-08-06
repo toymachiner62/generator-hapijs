@@ -11,7 +11,7 @@ describe('hapi generator', function () {
       }
 
       this.app = helpers.createGenerator('hapijs:app', [
-        '../../generators/app'
+        '../../app'
       ]);
       done();
     }.bind(this));

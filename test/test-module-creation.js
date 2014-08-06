@@ -13,7 +13,7 @@ describe('module generator', function () {
 								}
 
 								this.app = helpers.createGenerator('hapijs:module', [
-										'../../generators/module'
+										'../../module'
 								]);
 								done();
 						}.bind(this));
@@ -47,7 +47,7 @@ describe('module generator', function () {
 								}
 
 								this.app = helpers.createGenerator('hapijs:module', [
-										'../../generators/module'
+										'../../module'
 								], 'item');
 								done();
 						}.bind(this));
