@@ -8,7 +8,7 @@ var chalk = require('chalk');
 
 var HapiGenerator = yeoman.generators.Base.extend({
   init: function () {
-    this.pkg = require('../package.json');
+    this.pkg = require('../../package.json');
 
     this.on('end', function () {
       if (!this.options['skip-install']) {
