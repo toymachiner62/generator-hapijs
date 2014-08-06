@@ -1,6 +1,6 @@
 {
   "name": "generator-hapijs",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Yeoman generator for creating hapijs modules",
   "license": "MIT",
   "main": "app/index.js",
@@ -16,9 +16,7 @@
   "scripts": {
     "test": "mocha"
   },
-  "files": [
-    "app"
-  ],
+
   "keywords": [
     "yeoman-generator"
   ],
