@@ -10,7 +10,7 @@ describe('hapi generator', function () {
         return done(err);
       }
 
-      this.app = helpers.createGenerator('hapi:app', [
+      this.app = helpers.createGenerator('hapijs:app', [
         '../../generators/app'
       ]);
       done();

@@ -4,7 +4,7 @@ var path = require('path');
 var helpers = require('yeoman-generator').test;
 
 describe('module generator', function () {
-		describe('when no argument is provided. i.e. $ yo hapi:module', function() {
+		describe('when no argument is provided. i.e. $ yo hapijs:module', function() {
 
 				beforeEach(function (done) {
 						helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
@@ -12,7 +12,7 @@ describe('module generator', function () {
 										return done(err);
 								}
 
-								this.app = helpers.createGenerator('hapi:module', [
+								this.app = helpers.createGenerator('hapijs:module', [
 										'../../generators/module'
 								]);
 								done();
@@ -38,7 +38,7 @@ describe('module generator', function () {
 				});
 		});
 
-		describe('when the argument "item" is provided. i.e. $ yo hapi:module item', function() {
+		describe('when the argument "item" is provided. i.e. $ yo hapijs:module item', function() {
 
 				beforeEach(function (done) {
 						helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
@@ -46,7 +46,7 @@ describe('module generator', function () {
 										return done(err);
 								}
 
-								this.app = helpers.createGenerator('hapi:module', [
+								this.app = helpers.createGenerator('hapijs:module', [
 										'../../generators/module'
 								], 'item');
 								done();
