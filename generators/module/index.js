@@ -1,6 +1,8 @@
 'use strict';
 var util = require('util');
 var yeoman = require('yeoman-generator');
+var path = require('path');
+var fs = require('fs');
 
 
 var ModuleGenerator = yeoman.generators.Base.extend({
@@ -30,6 +32,17 @@ var ModuleGenerator = yeoman.generators.Base.extend({
 
 	// Copy all the template files for the module
   files: function () {
+
+  	// Create a directory with the name of the module
+		fs.mkdirSync(path.resolve(this.name), function(err) {
+			if (err && err.code != 'EEXIST') { // ignore the error if the folder already exists
+				// TODO: Handle error
+				console.log('error:');
+				console.log(err);
+			}
+    });
+
+		// Copy the template files with the correct name
     this.copy('module-ctrl.js', this.name+'-ctrl.js');
 		this.copy('module-dao.js', this.name+'-dao.js');
 		this.copy('module-test.js', this.name+'-test.js');

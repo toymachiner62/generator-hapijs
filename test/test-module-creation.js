@@ -22,9 +22,11 @@ describe('module generator', function () {
 				it('creates expected files', function (done) {
 						var expected = [
 								// add files you expect to exist here.
+								'item',
 								'item-ctrl.js',
 								'item-dao.js',
-								'item-test.js'
+								'item-test.js',
+								'item-route.js'
 						];
 
 						helpers.mockPrompt(this.app, {
@@ -56,6 +58,7 @@ describe('module generator', function () {
 				it('creates expected files', function (done) {
 						var expected = [
 								// add files you expect to exist here.
+								'item',
 								'item-ctrl.js',
 								'item-dao.js',
 								'item-test.js',
