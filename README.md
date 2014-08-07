@@ -13,12 +13,6 @@ To install generator-hapi from npm, run:
 $ npm install -g generator-hapijs
 ```
 
-Finally, initiate the generator:
-
-```bash
-$ yo hapijs
-```
-
 ### Generated Directory Structure
 
 This hapijs generator assumes that you want your project structure to look like this:

@@ -43,10 +43,10 @@ var ModuleGenerator = yeoman.generators.Base.extend({
     });
 
 		// Copy the template files with the correct name
-    this.copy('module-ctrl.js', this.name+'-ctrl.js');
-		this.copy('module-dao.js', this.name+'-dao.js');
-		this.copy('module-test.js', this.name+'-test.js');
-		this.copy('module-route.js', this.name+'-route.js');
+    this.copy('module-ctrl.js', path.resolve(this.name, this.name+'-ctrl.js'));
+		this.copy('module-dao.js', path.resolve(this.name, this.name+'-dao.js'));
+		this.copy('module-test.js', path.resolve(this.name, this.name+'-test.js'));
+		this.copy('module-route.js', path.resolve(this.name, this.name+'-route.js'));
   }
 });
 
