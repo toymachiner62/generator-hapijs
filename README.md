@@ -31,3 +31,16 @@ This hapijs generator assumes that you want your project structure to look like 
 ```bash
 $ yo hapijs:module foo  
 ```
+
+## Contributing
+
+To run tests:
+
+```js
+npm test
+```
+
+To install your local version of this package rather than the NPM published version:
+```js
+npm link
+```
