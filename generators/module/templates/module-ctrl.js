@@ -5,7 +5,7 @@
  *
  * @type {<%= name %>Dao|exports}
  */
-var SOMETHINGDao = require('./SOMETHING-dao');
+var <%= name %>Dao = require('./<%= name %>-dao');
 
 module.exports = function() {
 
@@ -17,9 +17,9 @@ module.exports = function() {
      * @param req
      * @param reply
      */
-    createSOMETHING: function createSOMETHING(req, reply) {
+    create<%= name %>: function create<%= name %>(req, reply) {
 
-      SOMETHINGDao.createSOMETHING(req.params.id, req.payload, function (err, data) {
+      <%= name %>Dao.create<%= name %>(req.params.id, req.payload, function (err, data) {
 
         if (err) {
           reply(Boom.badImplementation(err));
@@ -31,14 +31,14 @@ module.exports = function() {
     },
 
     /**
-     * Gets all SOMETHING
+     * Gets all <%= name %>
      *
      * @param req
      * @param reply
      */
-    findSOMETHING: function findSOMETHING(req, reply) {
+    find<%= name %>: function find<%= name %>(req, reply) {
 
-      SOMETHINGDao.findSOMETHING(req.params.id, req.payload, function (err, data) {
+      <%= name %>Dao.find<%= name %>(req.params.id, req.payload, function (err, data) {
 
         if (err) {
           reply(Boom.badImplementation(err));
@@ -49,14 +49,14 @@ module.exports = function() {
     },
 
     /**
-     * Get a specific SOMETHING by id
+     * Get a specific <%= name %> by id
      *
      * @param req
      * @param reply
      */
-    findSOMETHINGById: function findSOMETHINGById(req, reply) {
+    find<%= name %>ById: function find<%= name %>ById(req, reply) {
 
-      SOMETHINGDao.findSOMETHINGById(req.params.id, req.payload, function (err, data) {
+      <%= name %>Dao.find<%= name %>ById(req.params.id, req.payload, function (err, data) {
 
         if (err) {
           reply(Boom.badImplementation(err));
@@ -67,14 +67,14 @@ module.exports = function() {
     },
 
     /**
-     * Update a specific SOMETHING by id
+     * Update a specific <%= name %> by id
      *
      * @param req
      * @param reply
      */
-    updateSOMETHING: function updateSOMETHING(req, reply) {
+    update<%= name %>: function update<%= name %>(req, reply) {
 
-      SOMETHINGDao.updateSOMETHING(req.params.id, req.payload, function (err, data) {
+      <%= name %>Dao.update<%= name %>(req.params.id, req.payload, function (err, data) {
 
         if (err) {
           reply(Boom.badImplementation(err));

@@ -7,7 +7,7 @@ var fs = require('fs');
 
 var ModuleGenerator = yeoman.generators.Base.extend({
   init: function () {
-    console.log('You called the module subgenerator with the argument ' + this.arguments.name + '.');
+    console.log('You called the module subgenerator with the argument ' + this.arguments[0] + '.');
   },
 
 	// Prompt the user if they did not enter a module name
