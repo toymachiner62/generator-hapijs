@@ -22,7 +22,7 @@ module.exports = function() {
       <%= name %>Dao.create<%= name %>(req.params.id, req.payload, function (err, data) {
 
         if (err) {
-          reply(Boom.badImplementation(err));
+          return reply(Boom.badImplementation(err));
         }
 
         reply(data);
@@ -41,7 +41,7 @@ module.exports = function() {
       <%= name %>Dao.find<%= name %>(req.params.id, req.payload, function (err, data) {
 
         if (err) {
-          reply(Boom.badImplementation(err));
+          return reply(Boom.badImplementation(err));
         }
 
         reply(data);
@@ -59,7 +59,7 @@ module.exports = function() {
       <%= name %>Dao.find<%= name %>ById(req.params.id, req.payload, function (err, data) {
 
         if (err) {
-          reply(Boom.badImplementation(err));
+          return reply(Boom.badImplementation(err));
         }
 
         reply(data);
@@ -77,7 +77,7 @@ module.exports = function() {
       <%= name %>Dao.update<%= name %>(req.params.id, req.payload, function (err, data) {
 
         if (err) {
-          reply(Boom.badImplementation(err));
+          return reply(Boom.badImplementation(err));
         }
 
         reply(data);
