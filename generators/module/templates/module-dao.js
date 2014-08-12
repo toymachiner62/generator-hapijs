@@ -21,15 +21,6 @@ module.exports = function() {
     },
 
     /**
-     * Find all <%= name %>
-     *
-     * @param callback
-     */
-    findTasksByPatientId: function findTasksByPatientId(callback) {
-      // TODO: Implement dao method and call callback(null, <data>)
-    },
-
-    /**
      * Get's all <%= name %>
      *
      * @param callback
