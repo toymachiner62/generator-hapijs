@@ -1,16 +1,19 @@
 'use strict';
 var util = require('util');
 var yeoman = require('yeoman-generator');
+var yosay = require('yosay');
 var path = require('path');
 var fs = require('fs');
 
 
 var ModuleGenerator = yeoman.generators.Base.extend({
   init: function () {
+		
+		// Have Yeoman reiterate what the user did
     if (this.arguments[0]) {
-      console.log('You called the module subgenerator with the argument ' + this.arguments[0] + '.');
+	    this.log(yosay('You called the module subgenerator with the argument "' + this.arguments[0] + '".'));
     } else {
-      console.log('You called the module subgenerator with no arguments.');
+			this.log(yosay('You called the module subgenerator with no arguments.'));
     }
   },
 

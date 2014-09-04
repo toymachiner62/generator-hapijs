@@ -83,6 +83,24 @@ module.exports = function() {
         reply(data);
       });
     }
+		
+    /**
+     * Delete a specific <%= name %> by id
+     *
+     * @param req
+     * @param reply
+     */
+    delete<%= name %>: function delete<%= name %>(req, reply) {
+
+      <%= name %>Dao.update<%= name %>(req.params.id, req.payload, function (err, data) {
+
+        if (err) {
+          return reply(Boom.badImplementation(err));
+        }
+
+        reply(data);
+      });
+    }
   }
 
 }();

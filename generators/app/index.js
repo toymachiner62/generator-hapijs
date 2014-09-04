@@ -18,26 +18,28 @@ var HapiGenerator = yeoman.generators.Base.extend({
   },
 
   askFor: function () {
-    var done = this.async();
+    //var done = this.async();
 
-    // Have Yeoman greet the user.
-    this.log(yosay('Welcome to the marvelous Hapijs generator!'));
+		// Have Yeoman greet the user.
+		this.log(yosay('Welcome to the marvelous Hapijs generator!'));
 
-    var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
-
-    this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
-
-      done();
-    }.bind(this));
+    // var prompts = [{
+//       type: 'confirm',
+//       name: 'someOption',
+//       message: 'Would you like to enable this option?',
+//       default: true
+//     }];
+//
+//     this.prompt(prompts, function (props) {
+//       this.someOption = props.someOption;
+//
+//       done();
+//     }.bind(this));
   },
 
   files: function () {
+		this.copy('bower.json', 'bower.json');
+		this.copy('package.json', 'package.json');
 		this.copy('server.js', path.resolve('server.js'));
     this.mkdir('modules');
   },

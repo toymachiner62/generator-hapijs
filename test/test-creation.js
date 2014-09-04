@@ -18,15 +18,18 @@ describe('hapi generator', function () {
   });
 
   it('creates expected files', function (done) {
+		this.timeout(5000);
     var expected = [
       // add files you expect to exist here.
+			'bower.json',
+			'package.json',
 			'server.js',
       'modules'
     ];
 
-    helpers.mockPrompt(this.app, {
-      'someOption': true
-    });
+   // helpers.mockPrompt(this.app, {
+    //  'someOption': true
+    //});
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {
       helpers.assertFile(expected);

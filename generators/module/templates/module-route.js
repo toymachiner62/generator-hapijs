@@ -73,6 +73,22 @@ module.exports = function() {
           }
         }
       }
+    },
+    {
+      method: 'DELETE',
+      path: '/<%= name %>/{id}',
+      config : {
+        description: 'Delete a <%= name %> for a specific id',
+        handler: <%= name %>Controller.delete<%= name %>,
+        validate: {
+          params: {
+            id: Joi.number().integer().required()
+          },
+          payload: {
+            // TODO: Add some validations
+          }
+        }
+      }
     }
   ]
 }();

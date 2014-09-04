@@ -49,6 +49,16 @@ module.exports = function() {
     update<%= name %>: function update<%= name %>(id, payload, callback) {
       // TODO: Implement dao method and call callback(null, <data>)
     }
+		
+    /**
+     * Delete a specific <%= name %>
+     *
+     * @param id      - The id of the <%= name %> to be deleted
+     * @param callback
+     */
+    delete<%= name %>: function delete<%= name %>(id, payload, callback) {
+      // TODO: Implement dao method and call callback(null, <data>)
+    }
   }
 
 }();
