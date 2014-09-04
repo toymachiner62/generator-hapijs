@@ -22,11 +22,11 @@ describe('module generator', function () {
 				it('creates expected files', function (done) {
 						var expected = [
 								// add files you expect to exist here.
-								'item',
-								'item/item-ctrl.js',
-								'item/item-dao.js',
-								'item/item-test.js',
-								'item/item-route.js'
+								'modules/item',
+								'modules/item/item-ctrl.js',
+								'modules/item/item-dao.js',
+								'modules/item/item-test.js',
+								'modules/item/item-route.js'
 						];
 
 						helpers.mockPrompt(this.app, {
@@ -58,11 +58,11 @@ describe('module generator', function () {
 				it('creates expected files', function (done) {
 						var expected = [
 								// add files you expect to exist here.
-								'item',
-								'item/item-ctrl.js',
-								'item/item-dao.js',
-								'item/item-test.js',
-                'item/item-route.js'
+								'modules/item',
+								'modules/item/item-ctrl.js',
+								'modules/item/item-dao.js',
+								'modules/item/item-test.js',
+                'modules/item/item-route.js'
 						];
 
 						this.app.options['skip-install'] = true;

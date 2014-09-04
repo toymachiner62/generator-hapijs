@@ -21,7 +21,7 @@ var HapiGenerator = yeoman.generators.Base.extend({
     var done = this.async();
 
     // Have Yeoman greet the user.
-    this.log(yosay('Welcome to the marvelous Hapi generator!'));
+    this.log(yosay('Welcome to the marvelous Hapijs generator!'));
 
     var prompts = [{
       type: 'confirm',
@@ -37,18 +37,15 @@ var HapiGenerator = yeoman.generators.Base.extend({
     }.bind(this));
   },
 
-  app: function () {
-    this.mkdir('app');
-    this.mkdir('app/templates');
-
-    this.copy('_package.json', 'package.json');
-    this.copy('_bower.json', 'bower.json');
+  files: function () {
+		this.copy('server.js', path.resolve('server.js'));
+    this.mkdir('modules');
   },
 
-  projectfiles: function () {
-    this.copy('editorconfig', '.editorconfig');
-    this.copy('jshintrc', '.jshintrc');
-  }
+  // projectfiles: function () {
+//     //this.copy('editorconfig', '.editorconfig');
+//     //this.copy('jshintrc', '.jshintrc');
+//   }
 });
 
 module.exports = HapiGenerator;
