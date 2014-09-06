@@ -28,6 +28,14 @@ This hapijs generator assumes that you want your project structure to look like 
 
 ### Usage
 
+#### Main
+
+```bash
+$ yo hapijs  
+```
+
+#### Module
+
 ```bash
 $ yo hapijs:module foo  
 ```
