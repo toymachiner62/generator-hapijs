@@ -5,7 +5,7 @@
  *
  * @type {<%= name %>Dao|exports}
  */
-var <%= name %>Dao = require('./<%= name %>-dao');
+var <%= daoName %> = require('./<%= name %>-dao');
 
 module.exports = function() {
 
@@ -17,9 +17,9 @@ module.exports = function() {
      * @param req
      * @param reply
      */
-    create<%= name %>: function create<%= name %>(req, reply) {
+    create: function create(req, reply) {
 
-      <%= name %>Dao.create<%= name %>(req.params.id, req.payload, function (err, data) {
+      <%= daoName %>.create(req.payload, function (err, data) {
 
         if (err) {
           return reply(Boom.badImplementation(err));
@@ -31,14 +31,14 @@ module.exports = function() {
     },
 
     /**
-     * Gets all <%= name %>
+     * Gets all <%= pluralName %>
      *
      * @param req
      * @param reply
      */
-    find<%= name %>: function find<%= name %>(req, reply) {
+    find: function find(req, reply) {
 
-      <%= name %>Dao.find<%= name %>(req.params.id, req.payload, function (err, data) {
+      <%= daoName %>.find(function (err, data) {
 
         if (err) {
           return reply(Boom.badImplementation(err));
@@ -54,9 +54,9 @@ module.exports = function() {
      * @param req
      * @param reply
      */
-    find<%= name %>ById: function find<%= name %>ById(req, reply) {
+    findById: function findById(req, reply) {
 
-      <%= name %>Dao.find<%= name %>ById(req.params.id, req.payload, function (err, data) {
+      <%= daoName %>.findById(req.params.id, function (err, data) {
 
         if (err) {
           return reply(Boom.badImplementation(err));
@@ -72,9 +72,9 @@ module.exports = function() {
      * @param req
      * @param reply
      */
-    update<%= name %>: function update<%= name %>(req, reply) {
+    update: function update(req, reply) {
 
-      <%= name %>Dao.update<%= name %>(req.params.id, req.payload, function (err, data) {
+      <%= daoName %>.update(req.params.id, req.payload, function (err, data) {
 
         if (err) {
           return reply(Boom.badImplementation(err));
@@ -82,17 +82,17 @@ module.exports = function() {
 
         reply(data);
       });
-    }
+    },
 		
     /**
-     * Delete a specific <%= name %> by id
+     * Remove a specific <%= name %> by id
      *
      * @param req
      * @param reply
      */
-    delete<%= name %>: function delete<%= name %>(req, reply) {
+    remove: function remove(req, reply) {
 
-      <%= name %>Dao.update<%= name %>(req.params.id, req.payload, function (err, data) {
+      <%= daoName %>.remove(req.params.id, function (err, data) {
 
         if (err) {
           return reply(Boom.badImplementation(err));
