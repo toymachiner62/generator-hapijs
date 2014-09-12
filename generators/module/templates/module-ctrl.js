@@ -6,6 +6,7 @@
  * @type {<%= name %>Dao|exports}
  */
 var <%= daoName %> = require('./<%= name %>-dao');
+var Boom = require('boom');
 
 module.exports = function() {
 
