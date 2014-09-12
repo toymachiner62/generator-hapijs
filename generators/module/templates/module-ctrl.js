@@ -38,7 +38,7 @@ module.exports = function() {
      */
     find: function find(req, reply) {
 
-      <%= daoName %>.find(req.params.id, function (err, data) {
+      <%= daoName %>.find(function (err, data) {
 
         if (err) {
           return reply(Boom.badImplementation(err));
