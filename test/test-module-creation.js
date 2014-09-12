@@ -26,7 +26,7 @@ describe('module generator', function () {
 								'modules/items/item-ctrl.js',
 								'modules/items/item-dao.js',
 								'modules/items/item-test.js',
-								'modules/items/item-route.js'
+								'modules/items/item-routes.js'
 						];
 
 						helpers.mockPrompt(this.app, {
@@ -62,7 +62,7 @@ describe('module generator', function () {
 								'modules/items/item-ctrl.js',
 								'modules/items/item-dao.js',
 								'modules/items/item-test.js',
-                'modules/items/item-route.js'
+                'modules/items/item-routes.js'
 						];
 
 						this.app.options['skip-install'] = true;

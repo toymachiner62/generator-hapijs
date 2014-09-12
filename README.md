@@ -22,7 +22,7 @@ This hapijs generator assumes that you want your project structure to look like 
 --module
 ---module-ctrl.js
 ---module-dao.js
----module-route.js
+---module-routes.js
 ---module-test.js
 ```
 
