@@ -34,7 +34,7 @@ Lab.experiment('Creating <%= name %>', function() {
 
 });
 
-Lab.experiment('Fetching <%= name %>', function() {
+Lab.experiment('Fetching <%= pluralName %>', function() {
 
   Lab.test('should be successful', function (done) {
     var options = {

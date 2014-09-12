@@ -16,16 +16,16 @@ module.exports = function() {
      * @param payload - The data to be used to create a <%= name %>
      * @param callback
      */
-    create<%= name %>: function create<%= name %>(payload, callback) {
+    create: function create(payload, callback) {
       // TODO: Implement dao method and call callback(null, <data>)
     },
 
     /**
-     * Get's all <%= name %>
+     * Get's all <%= pluralName %>
      *
      * @param callback
      */
-    find<%= name %>: function findTasksForUser(callback) {
+    find: function find(callback) {
       // TODO: Implement dao method and call callback(null, <data>)
     },
 
@@ -35,7 +35,7 @@ module.exports = function() {
      * @param id  - The id of the <%= name %> to get
      * @param callback
      */
-    find<%= name %>ById: function findTaskById(id, callback) {
+    findById: function findById(id, callback) {
       // TODO: Implement dao method and call callback(null, <data>)
     },
 
@@ -46,17 +46,17 @@ module.exports = function() {
      * @param payload - The data to be updated
      * @param callback
      */
-    update<%= name %>: function update<%= name %>(id, payload, callback) {
+    update: function update(id, payload, callback) {
       // TODO: Implement dao method and call callback(null, <data>)
-    }
+    },
 		
     /**
-     * Delete a specific <%= name %>
+     * Remove a specific <%= name %>
      *
      * @param id      - The id of the <%= name %> to be deleted
      * @param callback
      */
-    delete<%= name %>: function delete<%= name %>(id, payload, callback) {
+    remove: function remove(id, callback) {
       // TODO: Implement dao method and call callback(null, <data>)
     }
   }

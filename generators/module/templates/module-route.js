@@ -6,20 +6,17 @@
  * @type {exports}
  */
 var Joi = require('Joi');
-var <%= name %>Controller = require('./<%= name %>-ctrl');
+var <%= controllerName %> = require('./<%= name %>-ctrl');
 
 module.exports = function() {
   return [
     {
       method: 'POST',
-      path: '/<%= name %>/',
+      path: '/<%= pluralName %>',
       config: {
         description: 'Creates a <%= name %>',
-        handler: <%= name %>Controller.create<%= name %>,
+        handler: <%= controllerName %>.create,
         validate: {
-          params: {
-
-          },
           payload: {
             // TODO: Add some validations
           }
@@ -28,42 +25,31 @@ module.exports = function() {
     },
     {
       method: 'GET',
-      path: '/<%= name %>/',
+      path: '/<%= pluralName %>',
       config : {
-        description: 'Fetches all <%= name %>',
-        handler: <%= name %>Controller.find<%= name %>,
-        validate: {
-          params: {
-
-          },
-          payload: {
-
-          }
-        }
+        description: 'Fetches all <%= pluralName %>',
+        handler: <%= controllerName %>.find
       }
     },
     {
       method: 'GET',
-      path: '/<%= name %>/{id}',
+      path: '/<%= pluralName %>/{id}',
       config : {
         description: 'Fetches a <%= name %> by id',
-        handler: <%= name %>Controller.find<%= name %>ById,
+        handler: <%= controllerName %>.findById,
         validate: {
           params: {
             id: Joi.number().integer().required()
-          },
-          payload: {
-
           }
         }
       }
     },
     {
       method: 'PUT',
-      path: '/<%= name %>/{id}',
+      path: '/<%= pluralName %>/{id}',
       config : {
         description: 'Updates a <%= name %> for a specific id',
-        handler: <%= name %>Controller.update<%= name %>,
+        handler: <%= controllerName %>.update,
         validate: {
           params: {
             id: Joi.number().integer().required()
@@ -76,16 +62,13 @@ module.exports = function() {
     },
     {
       method: 'DELETE',
-      path: '/<%= name %>/{id}',
+      path: '/<%= pluralName %>/{id}',
       config : {
-        description: 'Delete a <%= name %> for a specific id',
-        handler: <%= name %>Controller.delete<%= name %>,
+        description: 'Remove a <%= name %> for a specific id',
+        handler: <%= controllerName %>.remove,
         validate: {
           params: {
             id: Joi.number().integer().required()
-          },
-          payload: {
-            // TODO: Add some validations
           }
         }
       }
