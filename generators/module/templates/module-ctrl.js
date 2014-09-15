@@ -8,100 +8,82 @@
 var <%= daoName %> = require('./<%= name %>-dao');
 var Boom = require('boom');
 
-module.exports = function() {
+/**
+ * Creates a <%= name %>
+ *
+ * @param req
+ * @param reply
+ */
+exports.create = function (req, reply) {
 
-  return {
+	<%= daoName %>.create(req.payload, function (err, data) {
+		if (err) {
+			return reply(Boom.wrap(err));
+		}
+		reply(data);
+	});
+};
 
-    /**
-     * Creates a <%= name %>
-     *
-     * @param req
-     * @param reply
-     */
-    create: function create(req, reply) {
+/**
+ * Gets all <%= pluralName %>
+ *
+ * @param req
+ * @param reply
+ */
+exports.find = function (req, reply) {
 
-      <%= daoName %>.create(req.payload, function (err, data) {
+	<%= daoName %>.find(function (err, data) {
+		if (err) {
+			return reply(Boom.wrap(err));
+		}
+		reply(data);
+	});
+};
 
-        if (err) {
-          return reply(Boom.badImplementation(err));
-        }
+/**
+ * Get a specific <%= name %> by id
+ *
+ * @param req
+ * @param reply
+ */
+exports.findById = function (req, reply) {
 
-        reply(data);
-      });
+	<%= daoName %>.findById(req.params.id, function (err, data) {
+		if (err) {
+			return reply(Boom.wrap(err));
+		}
+		reply(data);
+	});
+};
 
-    },
+/**
+ * Update a specific <%= name %> by id
+ *
+ * @param req
+ * @param reply
+ */
+exports.update = function (req, reply) {
 
-    /**
-     * Gets all <%= pluralName %>
-     *
-     * @param req
-     * @param reply
-     */
-    find: function find(req, reply) {
-
-      <%= daoName %>.find(function (err, data) {
-
-        if (err) {
-          return reply(Boom.badImplementation(err));
-        }
-
-        reply(data);
-      });
-    },
-
-    /**
-     * Get a specific <%= name %> by id
-     *
-     * @param req
-     * @param reply
-     */
-    findById: function findById(req, reply) {
-
-      <%= daoName %>.findById(req.params.id, function (err, data) {
-
-        if (err) {
-          return reply(Boom.badImplementation(err));
-        }
-
-        reply(data);
-      });
-    },
-
-    /**
-     * Update a specific <%= name %> by id
-     *
-     * @param req
-     * @param reply
-     */
-    update: function update(req, reply) {
-
-      <%= daoName %>.update(req.params.id, req.payload, function (err, data) {
-
-        if (err) {
-          return reply(Boom.badImplementation(err));
-        }
-
-        reply(data);
-      });
-    },
+	<%= daoName %>.update(req.params.id, req.payload, function (err, data) {
+		if (err) {
+			return reply(Boom.wrap(err));
+		}
+		reply(data);
+	});
+};
 		
-    /**
-     * Remove a specific <%= name %> by id
-     *
-     * @param req
-     * @param reply
-     */
-    remove: function remove(req, reply) {
+/**
+ * Remove a specific <%= name %> by id
+ *
+ * @param req
+ * @param reply
+ */
+exports.remove = function (req, reply) {
 
-      <%= daoName %>.remove(req.params.id, function (err, data) {
-
-        if (err) {
-          return reply(Boom.badImplementation(err));
-        }
-
-        reply(data);
-      });
-    }
-  }
-
-}();
+	<%= daoName %>.remove(req.params.id, function (err, data) {
+		if (err) {
+			return reply(Boom.wrap(err));
+		}
+		reply(data);
+	});
+};

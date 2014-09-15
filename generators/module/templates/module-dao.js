@@ -5,60 +5,59 @@
  *
  * @type {exports}
  */
+var Boom = require('boom');
 
-module.exports = function() {
+/**
+ * Creates a <%= name %>
+ *
+ * @param payload - The data to be used to create a <%= name %>
+ * @param callback
+ */
+exports.create = function (payload, callback) {
+	// TODO: Implement dao method and call callback(null, <data>)
+	return callback(Boom.notImplemented());
+};
 
-  return {
+/**
+ * Get's all <%= pluralName %>
+ *
+ * @param callback
+ */
+exports.find = function (callback) {
+	// TODO: Implement dao method and call callback(null, <data>)
+	return callback(Boom.notImplemented());
+};
 
-    /**
-     * Creates a <%= name %>
-     *
-     * @param payload - The data to be used to create a <%= name %>
-     * @param callback
-     */
-    create: function create(payload, callback) {
-      // TODO: Implement dao method and call callback(null, <data>)
-    },
+/**
+ * Get's a specific <%= name %> by the id
+ *
+ * @param id  - The id of the <%= name %> to get
+ * @param callback
+ */
+exports.findById = function (id, callback) {
+	// TODO: Implement dao method and call callback(null, <data>)
+	return callback(Boom.notImplemented());
+};
 
-    /**
-     * Get's all <%= pluralName %>
-     *
-     * @param callback
-     */
-    find: function find(callback) {
-      // TODO: Implement dao method and call callback(null, <data>)
-    },
+/**
+ * Updates a specific <%= name %>
+ *
+ * @param id      - The id of the <%= name %> to be updated
+ * @param payload - The data to be updated
+ * @param callback
+ */
+exports.update = function (id, payload, callback) {
+	// TODO: Implement dao method and call callback(null, <data>)
+	return callback(Boom.notImplemented());
+};
 
-    /**
-     * Get's a specific <%= name %> by the id
-     *
-     * @param id  - The id of the <%= name %> to get
-     * @param callback
-     */
-    findById: function findById(id, callback) {
-      // TODO: Implement dao method and call callback(null, <data>)
-    },
-
-    /**
-     * Updates a specific <%= name %>
-     *
-     * @param id      - The id of the <%= name %> to be updated
-     * @param payload - The data to be updated
-     * @param callback
-     */
-    update: function update(id, payload, callback) {
-      // TODO: Implement dao method and call callback(null, <data>)
-    },
-		
-    /**
-     * Remove a specific <%= name %>
-     *
-     * @param id      - The id of the <%= name %> to be deleted
-     * @param callback
-     */
-    remove: function remove(id, callback) {
-      // TODO: Implement dao method and call callback(null, <data>)
-    }
-  }
-
-}();
+/**
+ * Remove a specific <%= name %>
+ *
+ * @param id      - The id of the <%= name %> to be deleted
+ * @param callback
+ */
+exports.remove = function (id, callback) {
+	// TODO: Implement dao method and call callback(null, <data>)
+	return callback(Boom.notImplemented());
+};
