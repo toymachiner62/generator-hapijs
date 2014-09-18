@@ -5,7 +5,7 @@
  *
  * @type {exports}
  */
-var Joi = require('Joi');
+var Joi = require('joi');
 var <%= controllerName %> = require('./<%= name %>-ctrl');
 
 module.exports = function() {
