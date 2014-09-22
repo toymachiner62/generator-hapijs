@@ -28,8 +28,8 @@ describe('hapi generator', function () {
     ];
 
    // helpers.mockPrompt(this.app, {
-    //  'someOption': true
-    //});
+		//  'someOption': true
+		//});
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {
       helpers.assertFile(expected);

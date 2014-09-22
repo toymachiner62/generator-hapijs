@@ -1,5 +1,9 @@
 {
   "name": "package",
   "version": "0.0.0",
-  "dependencies": {}
+  "dependencies": {
+		"hapi": "*",
+		"joi": "*",
+		"boom": "*"
+	}
 }
