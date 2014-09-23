@@ -42,7 +42,8 @@ var HapiGenerator = yeoman.generators.Base.extend({
 		this.copy('package.json', 'package.json');
 		this.copy('server.js', path.resolve('server.js'));
     this.mkdir('modules');
-  },
+		this.copy('index.js', path.resolve('modules/index.js'));
+  }
 
   // projectfiles: function () {
 //     //this.copy('editorconfig', '.editorconfig');

@@ -24,7 +24,8 @@ describe('hapi generator', function () {
 			'bower.json',
 			'package.json',
 			'server.js',
-      'modules'
+      'modules',
+			'modules/index.js'
     ];
 
    // helpers.mockPrompt(this.app, {

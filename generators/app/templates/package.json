@@ -4,6 +4,7 @@
   "dependencies": {
 		"hapi": "*",
 		"joi": "*",
-		"boom": "*"
+		"boom": "*",
+		"underscore": "*"
 	}
 }
