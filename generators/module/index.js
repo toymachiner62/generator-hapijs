@@ -5,7 +5,6 @@ var yosay = require('yosay');
 var path = require('path');
 var fs = require('fs');
 var inflection = require('inflection');
-
 var modulesDir = path.resolve('./modules');
 
 var ModuleGenerator = yeoman.generators.Base.extend({

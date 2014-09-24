@@ -23,7 +23,6 @@ module.exports = function() {
         }
       }
     },
-		
     {
       method: 'GET',
       path: '/<%= pluralName %>',
@@ -32,7 +31,6 @@ module.exports = function() {
         handler: <%= controllerName %>.find
       }
     },
-		
     {
       method: 'GET',
       path: '/<%= pluralName %>/{id}',
@@ -46,7 +44,6 @@ module.exports = function() {
         }
       }
     },
-		
     {
       method: 'PUT',
       path: '/<%= pluralName %>/{id}',
@@ -63,7 +60,6 @@ module.exports = function() {
         }
       }
     },
-		
     {
       method: 'DELETE',
       path: '/<%= pluralName %>/{id}',
@@ -77,7 +73,7 @@ module.exports = function() {
         }
       }
     }
-		
-		/* Add new methods above */
   ]
+	
+	/* Add new methods above */
 }();
