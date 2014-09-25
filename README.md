@@ -29,15 +29,22 @@ This hapijs generator assumes that you want your project structure to look like 
 ### Usage
 
 #### Main
+>Scaffolds out a hapijs project.
 
 ```bash
 $ yo hapijs  
 ```
 
 #### Module
-
+>Scaffolds out a module to an existing hapijs project
 ```bash
 $ yo hapijs:module foo  
+```
+
+#### Route
+>Scaffolds out a new route/ctrl/dao for an existing module
+```bash
+$ yo hapijs:route foo  
 ```
 
 ## Contributing
