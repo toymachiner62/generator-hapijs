@@ -43,10 +43,10 @@ $ yo hapijs:module foo
 ```
 
 #### Route
-Scaffolds out a new route/ctrl/dao for an existing module
+Scaffolds out a new endpoint for an existing module
 
 ```bash
-$ yo hapijs:route foo  
+$ yo hapijs:endpoint  
 ```
 
 ## Contributing

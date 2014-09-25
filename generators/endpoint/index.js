@@ -13,9 +13,9 @@ var RouteGenerator = yeoman.generators.Base.extend({
 
 		// Have Yeoman reiterate what the user did
 		if (this.arguments[0]) {
-			this.log(yosay('You called the route subgenerator with the argument "' + this.arguments[0] + '".'));
+			this.log(yosay('You called the endpoint subgenerator with the argument "' + this.arguments[0] + '".'));
 		} else {
-			this.log(yosay('You called the route subgenerator with no arguments.'));
+			this.log(yosay('You called the endpoint subgenerator with no arguments.'));
 		}
 	},
 
@@ -26,19 +26,19 @@ var RouteGenerator = yeoman.generators.Base.extend({
 			{
 				type: 'input',
 				name: 'route',
-				message: 'Enter your route url (Example: /items or /items/:id)',
+				message: 'Enter your endpoint url (Example: /items or /items/:id)',
 				required: true
 			},
 			{
 				type: 'list',
 				name: 'methodType',
-				message: 'What type of method is this route?',
+				message: 'What type of method is this endpoint?',
 				choices: ["GET", "POST", "PUT", "DELETE"]
 			},
 			{
 				type: 'input',
 				name: 'description',
-				message: 'Give a brief description of this route?'
+				message: 'Give a brief description of this endpoint?'
 			},
 			{
 				type: 'input',
@@ -47,7 +47,7 @@ var RouteGenerator = yeoman.generators.Base.extend({
 			}
 		];
 
-		// If a route name was passed in to the generator use it, else add a prompt to the user for the module name
+		// If a module name was passed in to the generator use it, else add a prompt to the user for the module name
 		if (this.arguments[0]) {
 			this.module = this.arguments[0];
 		} else {
@@ -55,7 +55,7 @@ var RouteGenerator = yeoman.generators.Base.extend({
 			prompts.splice(1, 0, {
 				type: 'input',
 				name: 'module',
-				message: 'What module would you like to add your route to?',
+				message: 'What module would you like to add your endpoint to?',
 				required: true
 			})
 		}
@@ -73,7 +73,7 @@ var RouteGenerator = yeoman.generators.Base.extend({
 
 	},
 
-	// Copy the code for the new route to the dao, ctrl, and routes file
+	// Copy the code for the new endpoint to the dao, ctrl, and routes file
 	files: function () {
 
 		var module = inflection.singularize(this.module);
@@ -126,7 +126,7 @@ exports." + this.handler + " = function(callback) {\n\
 };\n\
 ";
 
-		// TODO: Refactor this into method and figure out how to get route comma to start after last route and not two lines past it
+		// TODO: Refactor this into method and figure out how to get endpoint comma to start after last endpoint and not two lines past it
 		var routePath = path.resolve(process.cwd(), 'modules', pluralModule, module + "-routes.js");
 		var ctrlPath = path.resolve(process.cwd(), 'modules', pluralModule, module + "-ctrl.js");
 		var daoPath = path.resolve(process.cwd(), 'modules', pluralModule, module + "-dao.js");

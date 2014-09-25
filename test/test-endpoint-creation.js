@@ -3,7 +3,7 @@
 var path = require('path');
 var helpers = require('yeoman-generator').test;
 
-describe('route generator', function () {
+describe('endpoint generator', function () {
 	describe('when no argument is provided. i.e. $ yo hapijs:route', function() {
 
 		beforeEach(function (done) {
@@ -29,9 +29,9 @@ describe('route generator', function () {
 				// Run the generator to create some files to test with
 				app.run({}, function () {
 					
-					// Define the route generator
-					that.app = helpers.createGenerator('hapijs:route', [
-						'../../generators/route'
+					// Define the endpoint generator
+					that.app = helpers.createGenerator('hapijs:endpoint', [
+						'../../generators/endpoint'
 					]);
 
 					// Mock the prompts that are used for each of the tests
@@ -50,7 +50,7 @@ describe('route generator', function () {
 		});
 
 
-		it('adds the expected route', function (done) {
+		it('adds the expected endpoint', function (done) {
 			
 		var expected = ",\n\
 		\n\
@@ -120,7 +120,7 @@ exports.findEm = function\\(callback\\) {\n\
 	});
 
 
-	describe('when no argument is provided. i.e. $ yo hapijs:route item', function() {
+	describe('when no argument is provided. i.e. $ yo hapijs:endpoint item', function() {
 
 		beforeEach(function (done) {
 			helpers.testDirectory(path.join(__dirname, 'temp'), function (err) {
@@ -143,9 +143,9 @@ exports.findEm = function\\(callback\\) {\n\
 				app.options['skip-install'] = true;
 				app.run({}, function () {
 
-					// Define the route generator
-					that.app = helpers.createGenerator('hapijs:route', [
-						'../../generators/route'
+					// Define the endpoint generator
+					that.app = helpers.createGenerator('hapijs:endpoint', [
+						'../../generators/endpoint'
 					], 'item');
 
 					helpers.mockPrompt(that.app, {
@@ -163,7 +163,7 @@ exports.findEm = function\\(callback\\) {\n\
 		});
 
 
-		it('adds the expected route', function (done) {
+		it('adds the expected endpoint', function (done) {
 
 			var expected = ",\n\
 		\n\
