@@ -6,7 +6,6 @@ var path 				= require('path');
 var fs 					= require('fs');
 var inflection 	= require('inflection');
 
-var modulesDir = path.resolve('./modules');
 var MARKER = "/* Add new methods above */";
 
 var RouteGenerator = yeoman.generators.Base.extend({
@@ -23,101 +22,111 @@ var RouteGenerator = yeoman.generators.Base.extend({
 	// Prompt the user if they did not enter a module name
 	promptTask: function() {
 
-		// If a route name was passed in to the generator use it, else prompt the user for the route name
+		var prompts = [
+			{
+				type: 'input',
+				name: 'route',
+				message: 'Enter your route url (Example: /items or /items/:id)',
+				required: true
+			},
+			{
+				type: 'list',
+				name: 'methodType',
+				message: 'What type of method is this route?',
+				choices: ["GET", "POST", "PUT", "DELETE"]
+			},
+			{
+				type: 'input',
+				name: 'description',
+				message: 'Give a brief description of this route?'
+			},
+			{
+				type: 'input',
+				name: 'handler',
+				message: 'What would you like to name your method handler?'
+			}
+		];
+
+		// If a route name was passed in to the generator use it, else add a prompt to the user for the module name
 		if (this.arguments[0]) {
-			this.route = this.arguments[0];
+			this.module = this.arguments[0];
 		} else {
-			var done = this.async();
-			
-			var prompts = [
-				{	
-					type: 'input',
-					name: 'route',
-					message: 'Enter your route url (Example: /items or /items/:id)',
-					required: true
-				},
-				{
-					type: 'input',
-					name: 'module',
-					message: 'What module would you like to add your route to?',
-					required: true
-				},
-				{
-					type: 'list',
-					name: 'methodType',
-					message: 'What type of method is this route?',
-					choices: ["GET", "POST", "PUT", "DELETE"]
-				},
-				{
-					type: 'input',
-					name: 'description',
-					message: 'Give a brief description of this route?'
-				},
-				{
-					type: 'input',
-					name: 'handler',
-					message: 'What would you like to name your method handler?'
-				}
-			];
-			
-			this.prompt(prompts, function (answers) {
-				this.route = answers.route;
-				this.module = answers.module;
-				this.methodType = answers.methodType;
-				this.handler = answers.handler;
-				done();
-			}.bind(this));
+			// Add the module prompt as the 2nd prompt
+			prompts.splice(1, 0, {
+				type: 'input',
+				name: 'module',
+				message: 'What module would you like to add your route to?',
+				required: true
+			})
 		}
+
+		var done = this.async();
+
+		this.prompt(prompts, function (answers) {
+			this.route = answers.route;
+			this.module = answers.module;
+			this.methodType = answers.methodType;
+			this.description = answers.description;
+			this.handler = answers.handler;
+			done();
+		}.bind(this));
+
 	},
 
-	// Copy all the template files for the module
+	// Copy the code for the new route to the dao, ctrl, and routes file
 	files: function () {
 
-		var routeToAdd = ",\
-			\
-			{\
-    		method: '" + this.methodType + "',\
-      	path: '" + this.route + "',\
-      	config : {\
-      		description: '" + this.description + "',\
-        	handler: '" + this.handler + "'\
-      	}\
-    	}\
-		";
-		
-		var ctrlToAdd = "\
-			/**\
-			 * Remove a specific <%= name %> by id\
-			 *\
-			 * @param req\
-			 * @param reply\
-			 */\
-			 exports.remove = function (req, reply) {\
-				 \
-				 <%= daoName %>.remove(req.params.id, function (err, data) {\
-					 if (err) {\
-						 return reply(Boom.wrap(err));\
-					 }\
-					 reply(data);\
-				 });\
-			 };\
-		";
-		
-		var daoToAdd = "\
-			/**\
-			 * Get's all <%= pluralName %>\
-			 *\
-			 * @param callback\
-			 */\
-			 exports.find = function (callback) {\
-				 // TODO: Implement dao method and call callback(null, <data>)\
-				 return callback(Boom.notImplemented());\
-			 };\
-		";
-		
 		var module = inflection.singularize(this.module);
 		var pluralModule = inflection.pluralize(this.module);
+		var daoName = inflection.camelize(module, true) + 'Dao';
+		var controllerName = inflection.camelize(module, true) + 'Controller';
 
+		// THE INDENTATION OF THIS VARIABLE IS IMPORTANT EVEN THOUGH IT LOOKS MESSY AS HELL
+		var routeToAdd = ",\n\
+		\n\
+		{\n\
+			method: '" + this.methodType + "',\n\
+			path: '" + this.route + "',\n\
+			config : {\n\
+				description: '" + this.description + "',\n\
+				handler: " + controllerName + "." + this.handler + "\n\
+			}\n\
+		}";
+
+		// THE INDENTATION OF THIS VARIABLE IS IMPORTANT EVEN THOUGH IT LOOKS MESSY AS HELL
+		var ctrlToAdd = "\
+/**\n\
+ * " + this.description + "\n\
+ *\n\
+ * @param req\n\
+ * @param reply\n\
+ */\n\
+exports." + this.handler + " = function (req, reply) {\n\
+\n\
+	" + daoName + "." + this.handler + "(req.params.id, function (err, data) {\n\
+		if (err) {\n\
+			return reply(Boom.wrap(err));\n\
+		}\n\
+		\n\
+		reply(data);\n\
+	});\n\
+};\n\
+";
+
+		// THE INDENTATION OF THIS VARIABLE IS IMPORTANT EVEN THOUGH IT LOOKS MESSY AS HELL
+		var daoToAdd = "\
+/**\n\
+ * " + this.description + "\n\
+ *\n\
+ * @param callback\n\
+ */\n\
+exports." + this.handler + " = function(callback) {\n\
+	// TODO: Implement dao method and call callback(null, <data>)\n\
+	return callback(Boom.notImplemented());\n\
+};\n\
+";
+
+		// TODO: Refactor this into method and figure out how to get route comma to start after last route and not two lines past it
 		var routePath = path.resolve(process.cwd(), 'modules', pluralModule, module + "-routes.js");
 		var ctrlPath = path.resolve(process.cwd(), 'modules', pluralModule, module + "-ctrl.js");
 		var daoPath = path.resolve(process.cwd(), 'modules', pluralModule, module + "-dao.js");
@@ -139,46 +148,7 @@ var RouteGenerator = yeoman.generators.Base.extend({
 		fs.writeFileSync(routePath,routeSrc);
 		fs.writeFileSync(ctrlPath,ctrlSrc);
 		fs.writeFileSync(daoPath,daoSrc);
-		
-		// Default preference of using plural names for somethings, and singular for others
-		//this.name = inflection.singularize( this.name );
-		//this.pluralName = inflection.pluralize( this.name );
-		//this.daoName = inflection.camelize( this.name, true ) + 'Dao';
-		//this.controllerName = inflection.camelize( this.name, true ) + 'Controller';
 
-		// Create the modules directory if it doesn't already exist
-		//if (!fs.existsSync(modulesDir)) {
-			//fs.mkdirSync(modulesDir, function (err) {
-				//if (err) {
-					// TODO: Handle error
-					//console.log('error:');
-					//console.log(err);
-					//}
-			//});
-			//}
-
-		// Create a directory with the name of the module inside the modules directory if it doesn't already exist
-		//var newModuleDir = path.join(modulesDir, this.pluralName);
-		//if (fs.existsSync(newModuleDir)) {
-			//console.log('error:');
-			//console.log('New module directory already exists - ' + newModuleDir);
-			//return;
-			//}
-		//fs.mkdirSync(newModuleDir, function(err) {
-			//if (err) {
-				// TODO: Handle error
-				//console.log('error:');
-				//console.log(err);
-				//}
-		//});
-
-		// Copy the template files with the correct name
-		//var newBaseFileName = path.join(newModuleDir, this.name);
-		//this.mkdir('modules');
-		//this.copy('module-ctrl.js', path.resolve(newBaseFileName + '-ctrl.js'));
-		//this.copy('module-dao.js', path.resolve(newBaseFileName + '-dao.js'));
-		//this.copy('module-test.js', path.resolve(newBaseFileName + '-test.js'));
-		//this.copy('module-routes.js', path.resolve(newBaseFileName + '-routes.js'));
 	}
 });
 
