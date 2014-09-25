@@ -42,7 +42,7 @@ Scaffolds out a module to an existing hapijs project
 $ yo hapijs:module foo  
 ```
 
-#### Route
+#### Endpoint
 Scaffolds out a new endpoint for an existing module
 
 ```bash
