@@ -6,5 +6,12 @@
 		"joi": "*",
 		"boom": "*",
 		"underscore": "*"
+	},
+	"devDependencies": {
+		"lab": "*"
+	},
+	"scripts": {
+		"start": "node server.js",
+		"test": "lab"
 	}
 }

@@ -7,7 +7,7 @@
  */
 
 var Lab = require('lab');
-var server = require('../');
+var server = require('../../server.js');
 
 /**
  * All the tests related to tasks
