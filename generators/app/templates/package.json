@@ -12,6 +12,6 @@
 	},
 	"scripts": {
 		"start": "node server.js",
-		"test": "lab"
+		"test": "lab ./modules"
 	}
 }
