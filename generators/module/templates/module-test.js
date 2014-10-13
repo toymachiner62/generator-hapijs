@@ -18,7 +18,7 @@ lab.experiment('Creating <%= name %>', function() {
   lab.test('should be successful', function (done) {
     var options = {
       method: 'POST',
-      url: '/<%= name %>',
+      url: '/<%= pluralName %>',
       payload: {
 
       }
@@ -40,7 +40,7 @@ lab.experiment('Fetching <%= pluralName %>', function() {
   lab.test('should be successful', function (done) {
     var options = {
       method: 'GET',
-      url: '/<%= name %>',
+      url: '/<%= pluralName %>',
       payload: {
 
       }
