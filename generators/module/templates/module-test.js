@@ -8,13 +8,14 @@
 
 var Lab = require('lab');
 var server = require('../../server.js');
+var lab = exports.lab = Lab.script();
 
 /**
  * All the tests related to tasks
  */
-Lab.experiment('Creating <%= name %>', function() {
+lab.experiment('Creating <%= name %>', function() {
 
-  Lab.test('should be successful', function (done) {
+  lab.test('should be successful', function (done) {
     var options = {
       method: 'POST',
       url: '/<%= name %>',
@@ -34,9 +35,9 @@ Lab.experiment('Creating <%= name %>', function() {
 
 });
 
-Lab.experiment('Fetching <%= pluralName %>', function() {
+lab.experiment('Fetching <%= pluralName %>', function() {
 
-  Lab.test('should be successful', function (done) {
+  lab.test('should be successful', function (done) {
     var options = {
       method: 'GET',
       url: '/<%= name %>',
