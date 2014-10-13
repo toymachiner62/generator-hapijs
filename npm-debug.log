@@ -1,0 +1,209 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/tomcaflisch/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/tmp.tgz
+12 verbose folder .
+13 info prepublish generator-hapijs@0.1.2
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/tomcaflisch/.npm/1f1177db-tar.lock
+16 silly lockFile a6481c6f-16404-0-9561803385149688-tmp-tgz tar:///var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/tmp.tgz
+17 verbose lock tar:///var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/tmp.tgz /Users/tomcaflisch/.npm/a6481c6f-16404-0-9561803385149688-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile a6481c6f-16404-0-9561803385149688-tmp-tgz tar:///var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/tmp.tgz
+21 silly lockFile a6481c6f-16404-0-9561803385149688-tmp-tgz tar:///var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/tmp.tgz
+22 verbose tar unpack /var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/tmp.tgz
+23 silly lockFile 4c04839f-16404-0-9561803385149688-package tar:///var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/package
+24 verbose lock tar:///var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/package /Users/tomcaflisch/.npm/4c04839f-16404-0-9561803385149688-package.lock
+25 silly lockFile a6481c6f-16404-0-9561803385149688-tmp-tgz tar:///var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/tmp.tgz
+26 verbose lock tar:///var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/tmp.tgz /Users/tomcaflisch/.npm/a6481c6f-16404-0-9561803385149688-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry .npmignore
+30 silly gunzTarPerm extractEntry README.md
+31 silly gunzTarPerm extractEntry .jshintrc
+32 silly gunzTarPerm extractEntry .travis.yml
+33 silly gunzTarPerm extractEntry .gitattributes
+34 silly gunzTarPerm extractEntry coverage/coverage.json
+35 silly gunzTarPerm extractEntry coverage/lcov-report/prettify.js
+36 silly gunzTarPerm extractEntry coverage/lcov-report/app/index.html
+37 silly gunzTarPerm extractEntry coverage/lcov-report/app/index.js.html
+38 silly gunzTarPerm extractEntry coverage/lcov-report/index.html
+39 silly gunzTarPerm extractEntry coverage/lcov-report/module/index.html
+40 silly gunzTarPerm extractEntry coverage/lcov-report/module/index.js.html
+41 silly gunzTarPerm extractEntry coverage/lcov-report/prettify.css
+42 silly gunzTarPerm extractEntry coverage/lcov.info
+43 silly gunzTarPerm extractEntry generators/app/index.js
+44 silly gunzTarPerm extractEntry generators/app/templates/package.json
+45 silly gunzTarPerm extractEntry generators/app/templates/index.js
+46 silly gunzTarPerm extractEntry generators/app/templates/server.js
+47 silly gunzTarPerm extractEntry generators/app/templates/bower.json
+48 silly gunzTarPerm extractEntry generators/endpoint/index.js
+49 silly gunzTarPerm extractEntry generators/endpoint/templates/module-ctrl.js
+50 silly gunzTarPerm extractEntry generators/endpoint/templates/module-dao.js
+51 silly gunzTarPerm extractEntry generators/endpoint/templates/module-routes.js
+52 silly gunzTarPerm extractEntry generators/endpoint/templates/module-test.js
+53 silly gunzTarPerm extractEntry generators/module/index.js
+54 silly gunzTarPerm extractEntry generators/module/templates/module-ctrl.js
+55 silly gunzTarPerm extractEntry generators/module/templates/module-dao.js
+56 silly gunzTarPerm extractEntry generators/module/templates/module-routes.js
+57 silly gunzTarPerm extractEntry generators/module/templates/module-test.js
+58 silly gunzTarPerm extractEntry .editorconfig
+59 silly gunzTarPerm extractEntry test/test-creation.js
+60 silly gunzTarPerm extractEntry test/test-endpoint-creation.js
+61 silly gunzTarPerm extractEntry test/test-load.js
+62 silly gunzTarPerm extractEntry test/test-module-creation.js
+63 silly gunzTarPerm extractEntry test/temp/modules/items/item-ctrl.js
+64 silly gunzTarPerm extractEntry test/temp/modules/items/item-dao.js
+65 silly gunzTarPerm extractEntry test/temp/modules/items/item-routes.js
+66 silly gunzTarPerm extractEntry test/temp/modules/items/item-test.js
+67 silly lockFile 4c04839f-16404-0-9561803385149688-package tar:///var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/package
+68 silly lockFile 4c04839f-16404-0-9561803385149688-package tar:///var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/package
+69 silly lockFile a6481c6f-16404-0-9561803385149688-tmp-tgz tar:///var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/tmp.tgz
+70 silly lockFile a6481c6f-16404-0-9561803385149688-tmp-tgz tar:///var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/tmp.tgz
+71 verbose tar pack [ '/Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package.tgz',
+71 verbose tar pack   '/var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/package' ]
+72 verbose tarball /Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package.tgz
+73 verbose folder /var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/package
+74 silly lockFile 4c04839f-16404-0-9561803385149688-package tar:///var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/package
+75 verbose lock tar:///var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/package /Users/tomcaflisch/.npm/4c04839f-16404-0-9561803385149688-package.lock
+76 silly lockFile 12205dc3-nerator-hapijs-0-1-2-package-tgz tar:///Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package.tgz
+77 verbose lock tar:///Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package.tgz /Users/tomcaflisch/.npm/12205dc3-nerator-hapijs-0-1-2-package-tgz.lock
+78 silly lockFile 4c04839f-16404-0-9561803385149688-package tar:///var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/package
+79 silly lockFile 4c04839f-16404-0-9561803385149688-package tar:///var/folders/ts/_mzg9bhs7_lc39ztdcdj6w4h0000gn/T/npm-54297-njgDjfCP/1413164416404-0.9561803385149688/package
+80 silly lockFile 12205dc3-nerator-hapijs-0-1-2-package-tgz tar:///Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package.tgz
+81 silly lockFile 12205dc3-nerator-hapijs-0-1-2-package-tgz tar:///Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package.tgz
+82 silly lockFile 0873f69a-m-generator-hapijs-0-1-2-package /Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package
+83 verbose lock /Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package /Users/tomcaflisch/.npm/0873f69a-m-generator-hapijs-0-1-2-package.lock
+84 silly lockFile 0873f69a-m-generator-hapijs-0-1-2-package /Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package
+85 silly lockFile 0873f69a-m-generator-hapijs-0-1-2-package /Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package
+86 verbose tar unpack /Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package.tgz
+87 silly lockFile dba83e4f-m-generator-hapijs-0-1-2-package tar:///Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package
+88 verbose lock tar:///Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package /Users/tomcaflisch/.npm/dba83e4f-m-generator-hapijs-0-1-2-package.lock
+89 silly lockFile 12205dc3-nerator-hapijs-0-1-2-package-tgz tar:///Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package.tgz
+90 verbose lock tar:///Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package.tgz /Users/tomcaflisch/.npm/12205dc3-nerator-hapijs-0-1-2-package-tgz.lock
+91 silly gunzTarPerm modes [ '755', '644' ]
+92 silly gunzTarPerm extractEntry package.json
+93 silly gunzTarPerm extractEntry .npmignore
+94 silly gunzTarPerm extractEntry README.md
+95 silly gunzTarPerm extractEntry .editorconfig
+96 silly gunzTarPerm extractEntry .gitattributes
+97 silly gunzTarPerm extractEntry .jshintrc
+98 silly gunzTarPerm extractEntry .travis.yml
+99 silly gunzTarPerm extractEntry coverage/coverage.json
+100 silly gunzTarPerm extractEntry coverage/lcov-report/prettify.js
+101 silly gunzTarPerm extractEntry coverage/lcov-report/app/index.html
+102 silly gunzTarPerm extractEntry coverage/lcov-report/app/index.js.html
+103 silly gunzTarPerm extractEntry coverage/lcov-report/index.html
+104 silly gunzTarPerm extractEntry coverage/lcov-report/module/index.html
+105 silly gunzTarPerm extractEntry coverage/lcov-report/module/index.js.html
+106 silly gunzTarPerm extractEntry coverage/lcov-report/prettify.css
+107 silly gunzTarPerm extractEntry coverage/lcov.info
+108 silly gunzTarPerm extractEntry generators/app/index.js
+109 silly gunzTarPerm extractEntry generators/app/templates/package.json
+110 silly gunzTarPerm extractEntry generators/app/templates/index.js
+111 silly gunzTarPerm extractEntry generators/app/templates/server.js
+112 silly gunzTarPerm extractEntry generators/app/templates/bower.json
+113 silly gunzTarPerm extractEntry generators/endpoint/index.js
+114 silly gunzTarPerm extractEntry generators/endpoint/templates/module-ctrl.js
+115 silly gunzTarPerm extractEntry generators/endpoint/templates/module-dao.js
+116 silly gunzTarPerm extractEntry generators/endpoint/templates/module-routes.js
+117 silly gunzTarPerm extractEntry generators/endpoint/templates/module-test.js
+118 silly gunzTarPerm extractEntry generators/module/index.js
+119 silly gunzTarPerm extractEntry generators/module/templates/module-ctrl.js
+120 silly gunzTarPerm extractEntry generators/module/templates/module-dao.js
+121 silly gunzTarPerm extractEntry generators/module/templates/module-routes.js
+122 silly gunzTarPerm extractEntry generators/module/templates/module-test.js
+123 silly gunzTarPerm extractEntry test/test-creation.js
+124 silly gunzTarPerm extractEntry test/test-endpoint-creation.js
+125 silly gunzTarPerm extractEntry test/test-load.js
+126 silly gunzTarPerm extractEntry test/test-module-creation.js
+127 silly gunzTarPerm extractEntry test/temp/modules/items/item-ctrl.js
+128 silly gunzTarPerm extractEntry test/temp/modules/items/item-dao.js
+129 silly gunzTarPerm extractEntry test/temp/modules/items/item-routes.js
+130 silly gunzTarPerm extractEntry test/temp/modules/items/item-test.js
+131 silly lockFile dba83e4f-m-generator-hapijs-0-1-2-package tar:///Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package
+132 silly lockFile dba83e4f-m-generator-hapijs-0-1-2-package tar:///Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package
+133 silly lockFile 12205dc3-nerator-hapijs-0-1-2-package-tgz tar:///Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package.tgz
+134 silly lockFile 12205dc3-nerator-hapijs-0-1-2-package-tgz tar:///Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package.tgz
+135 verbose chmod /Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package.tgz 644
+136 verbose chown /Users/tomcaflisch/.npm/generator-hapijs/0.1.2/package.tgz [ 501, 20 ]
+137 silly lockFile 3a52ce78- .
+138 silly lockFile 3a52ce78- .
+139 silly publish { name: 'generator-hapijs',
+139 silly publish   version: '0.1.2',
+139 silly publish   description: 'Yeoman generator for creating hapijs modules',
+139 silly publish   license: 'MIT',
+139 silly publish   main: 'app/index.js',
+139 silly publish   repository:
+139 silly publish    { type: 'git',
+139 silly publish      url: 'git://github.com/toymachiner62/generator-hapijs' },
+139 silly publish   author:
+139 silly publish    { name: 'Tom Caflisch',
+139 silly publish      email: 'tomcaflisch@gmail.com',
+139 silly publish      url: 'https://github.com/toymachiner62' },
+139 silly publish   engines: { node: '>=0.10.0' },
+139 silly publish   scripts: { test: 'mocha' },
+139 silly publish   keywords: [ 'yeoman', 'hapi', 'generator' ],
+139 silly publish   dependencies:
+139 silly publish    { chalk: '~0.4.0',
+139 silly publish      inflection: '^1.4.2',
+139 silly publish      'yeoman-generator': '~0.16.0',
+139 silly publish      yosay: '^0.1.0' },
+139 silly publish   devDependencies: { mocha: '*' },
+139 silly publish   peerDependencies: { yo: '>=1.0.0' },
+139 silly publish   readme: '# generator-hapi [![Build Status](https://secure.travis-ci.org/toymachiner62/generator-hapijs.png?branch=master)](https://travis-ci.org/toymachiner62/generator-hapijs) [![Code Climate](https://codeclimate.com/github/toymachiner62/generator-hapijs/badges/gpa.svg)](https://codeclimate.com/github/toymachiner62/generator-hapijs) \n\n> [Yeoman](http://yeoman.io) generator for scaffolding [Hapijs](http://hapijs.com) modules \n\n\n## Getting Started\n\n### Installation\n\nTo install generator-hapi from npm, run:\n\n```bash\n$ npm install -g generator-hapijs\n```\n\n### Generated Directory Structure\n\nThis hapijs generator assumes that you want your project structure to look like this:\n\n```bash\n-project\n--module\n---module-ctrl.js\n---module-dao.js\n---module-routes.js\n---module-test.js\n```\n\n### Usage\n\n#### Main\nScaffolds out a hapijs project.\n\n```bash\n$ yo hapijs  \n```\n\n#### Module\nScaffolds out a module to an existing hapijs project\n\n```bash\n$ yo hapijs:module foo  \n```\n\n#### Endpoint\nScaffolds out a new endpoint for an existing module\n\n```bash\n$ yo hapijs:endpoint  \n```\n\n## Contributing\n\nTo run tests:\n\n```js\nnpm test\n```\n\nTo install your local version of this package rather than the NPM published version:\n```js\nnpm link\n```\n',
+139 silly publish   readmeFilename: 'README.md',
+139 silly publish   bugs: { url: 'https://github.com/toymachiner62/generator-hapijs/issues' },
+139 silly publish   homepage: 'https://github.com/toymachiner62/generator-hapijs',
+139 silly publish   _id: 'generator-hapijs@0.1.2',
+139 silly publish   dist: { shasum: 'b8d0c4cd1c91d442d2bee9a0c6d9e0d617dccf8f' },
+139 silly publish   _from: '.' }
+140 verbose url raw generator-hapijs
+141 verbose url resolving [ 'https://registry.npmjs.org/', './generator-hapijs' ]
+142 verbose url resolved https://registry.npmjs.org/generator-hapijs
+143 info trying registry request attempt 1 at 20:40:16
+144 http PUT https://registry.npmjs.org/generator-hapijs
+145 http 403 https://registry.npmjs.org/generator-hapijs
+146 error publish Failed PUT 403
+147 error Error: forbidden cannot modify pre-existing version: 0.1.2
+147 error old={"name":"generator-hapijs","version":"0.1.2","description":"Yeoman generator for creating hapijs modules","license":"MIT","main":"app/index.js","repository":{"type":"git","url":"git://github.com/toymachiner62/generator-hapijs"},"author":{"name":"Tom Caflisch","email":"tomcaflisch@gmail.com","url":"https://github.com/toymachiner62"},"engines":{"node":">=0.10.0"},"scripts":{"test":"mocha"},"keywords":["yeoman","hapi","generator"],"dependencies":{"chalk":"~0.4.0","inflection":"^1.4.2","yeoman-generator":"~0.16.0","yosay":"^0.1.0"},"devDependencies":{"mocha":"*"},"peerDependencies":{"yo":">=1.0.0"},"bugs":{"url":"https://github.com/toymachiner62/generator-hapijs/issues"},"homepage":"https://github.com/toymachiner62/generator-hapijs","_id":"generator-hapijs@0.1.2","dist":{"shasum":"20315caadfd187d05c8a46c313f514bd26106816","tarball":"http://registry.npmjs.org/generator-hapijs/-/generator-hapijs-0.1.2.tgz"},"_from":".","_npmVersion":"1.4.3","_npmUser":{"name":"toymachiner62","email":"tomcaflisch@gmail.com"},"maintainers":[{"name":"toymachiner62","email":"tomcaflisch@gmail.com"}]}
+147 error new={"name":"generator-hapijs","version":"0.1.2","description":"Yeoman generator for creating hapijs modules","license":"MIT","main":"app/index.js","repository":{"type":"git","url":"git://github.com/toymachiner62/generator-hapijs"},"author":{"name":"Tom Caflisch","email":"tomcaflisch@gmail.com","url":"https://github.com/toymachiner62"},"engines":{"node":">=0.10.0"},"scripts":{"test":"mocha"},"keywords":["yeoman","hapi","generator"],"dependencies":{"chalk":"~0.4.0","inflection":"^1.4.2","yeoman-generator":"~0.16.0","yosay":"^0.1.0"},"devDependencies":{"mocha":"*"},"peerDependencies":{"yo":">=1.0.0"},"readme":"# generator-hapi [![Build Status](https://secure.travis-ci.org/toymachiner62/generator-hapijs.png?branch=master)](https://travis-ci.org/toymachiner62/generator-hapijs) [![Code Climate](https://codeclimate.com/github/toymachiner62/generator-hapijs/badges/gpa.svg)](https://codeclimate.com/github/toymachiner62/generator-hapijs) \u000a\u000a> [Yeoman](http://yeoman.io) generator for scaffolding [Hapijs](http://hapijs.com) modules \u000a\u000a\u000a## Getting Started\u000a\u000a### Installation\u000a\u000aTo install generator-hapi from npm, run:\u000a\u000a```bash\u000a$ npm install -g generator-hapijs\u000a```\u000a\u000a### Generated Directory Structure\u000a\u000aThis hapijs generator assumes that you want your project structure to look like this:\u000a\u000a```bash\u000a-project\u000a--module\u000a---module-ctrl.js\u000a---module-dao.js\u000a---module-routes.js\u000a---module-test.js\u000a```\u000a\u000a### Usage\u000a\u000a#### Main\u000aScaffolds out a hapijs project.\u000a\u000a```bash\u000a$ yo hapijs  \u000a```\u000a\u000a#### Module\u000aScaffolds out a module to an existing hapijs project\u000a\u000a```bash\u000a$ yo hapijs:module foo  \u000a```\u000a\u000a#### Endpoint\u000aScaffolds out a new endpoint for an existing module\u000a\u000a```bash\u000a$ yo hapijs:endpoint  \u000a```\u000a\u000a## Contributing\u000a\u000aTo run tests:\u000a\u000a```js\u000anpm test\u000a```\u000a\u000aTo install your local version of this package rather than the NPM published version:\u000a```js\u000anpm link\u000a```\u000a","readmeFilename":"README.md","bugs":{"url":"https://github.com/toymachiner62/generator-hapijs/issues"},"homepage":"https://github.com/toymachiner62/generator-hapijs","_id":"generator-hapijs@0.1.2","dist":{"shasum":"b8d0c4cd1c91d442d2bee9a0c6d9e0d617dccf8f","tarball":"http://registry.npmjs.org/generator-hapijs/-/generator-hapijs-0.1.2.tgz"},"_from":".","_npmVersion":"1.4.3","_npmUser":{"name":"toymachiner62","email":"tomcaflisch@gmail.com"},"maintainers":[{"name":"toymachiner62","email":"tomcaflisch@gmail.com"}]}: generator-hapijs
+147 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:237:14)
+147 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:123:22)
+147 error     at Request.EventEmitter.emit (events.js:98:17)
+147 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:893:14)
+147 error     at Request.EventEmitter.emit (events.js:117:20)
+147 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:844:12)
+147 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+147 error     at _stream_readable.js:920:16
+147 error     at process._tickCallback (node.js:415:13)
+148 error If you need help, you may report this *entire* log,
+148 error including the npm and node versions, at:
+148 error     <http://github.com/npm/npm/issues>
+149 error System Darwin 13.3.0
+150 error command "node" "/usr/local/bin/npm" "publish"
+151 error cwd /Users/tomcaflisch/Sites/generator-hapijs
+152 error node -v v0.10.26
+153 error npm -v 1.4.3
+154 verbose exit [ 1, true ]
