@@ -7,7 +7,7 @@
  */
 
 var Lab = require('lab');
-var server = require('../../server.js');
+var server = require('../../index');
 var lab = exports.lab = Lab.script();
 
 /**
