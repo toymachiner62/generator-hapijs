@@ -8,7 +8,15 @@ var Hapi = require('hapi');
 var modules = require('./modules');
 
 // Instantiate the server
-var server = new Hapi.Server('0.0.0.0', 3000, {cors: true, debug: {request: ['error']}});
+var server = new Hapi.Server();
+
+server.connection({
+    port: 3000,
+    routes: {
+        cors: true,
+    }
+});
+
 
 /**
  * The hapijs plugins that we want to use and their configs
@@ -23,7 +31,7 @@ var server = new Hapi.Server('0.0.0.0', 3000, {cors: true, debug: {request: ['er
 /**
  * Setup the server with plugins
  */
-server.pack.register(plugins, function(err) {
+server.register(plugins, function(err) {
 
   // If there is an error on server startup
   if(err) {
@@ -59,4 +67,3 @@ for(var route in modules) {
  * @type {exports.server}
  */
 module.exports = server;
-
